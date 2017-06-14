@@ -7,10 +7,11 @@ public class testrunner {
 	public static void main(String[] args) {
 	SchaalDAO sdao = new SchaalDAO();
 	MedewerkerDAO mdao = new MedewerkerDAO();
+	AfdelingDAO adao = new AfdelingDAO();
 	
 	System.out.println("crud schaal volgorde select insert update  delete");
 
-	Schaal s = new Schaal(13,8000,9000,240);
+	Schaal s = new Schaal(14,9000,9500,240);
 	
 	System.out.println(sdao.selectAll());
 	System.out.println(sdao.insert(s));
@@ -20,10 +21,11 @@ public class testrunner {
 
 	
 	System.out.println("crud medewerker volgorde select insert update delete");
-
 	
-	Medewerker m = new Medewerker(7968,"Test","T","VERKOPER",7839,"17-Jan-99",4000,400,30,"m");
 	
+	Medewerker m = new Medewerker(8010,"Test","T","VERKOPER",7839,"17-Jan-99",4000,400,30,"m");
+	Afdeling afdeling = adao.findByCode(m.getAfd());
+	System.out.println(afdeling);
 	System.out.println(mdao.selectAll());
 	System.out.println(mdao.insert(m));
 	m.setNaam("TestT");

@@ -29,6 +29,8 @@ public class MedewerkerDAO extends BaseDao{
 		  String dateString = null;
 		   SimpleDateFormat sdfr = new SimpleDateFormat("dd/MMM/yy");
 		   dateString = sdfr.format( gbdatum );
+		   AfdelingDAO adao = new AfdelingDAO();
+		
 		Medewerker medewerker = new Medewerker(mnr,naam,voorl,functie,chef,dateString,maandsal,comm,afd,geslacht);
 	medewerkers.add(medewerker);
 	}

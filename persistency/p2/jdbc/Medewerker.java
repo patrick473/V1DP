@@ -11,10 +11,10 @@ public class Medewerker {
 	String gbdatum ;
 	Integer maandsal ;
 	Integer comm ;
-	Integer afd ;
+	int afd ;
 	String geslacht;
 	public Medewerker(Integer mnr, String naam, String voorl, String functie, Integer chef, String gbdatum,
-			Integer maandsal, Integer comm, Integer afd, String geslacht) {
+			Integer maandsal, Integer comm, int afd, String geslacht) {
 		this.mnr = mnr;
 		this.naam = naam;
 		this.voorl = voorl;
@@ -91,11 +91,11 @@ public class Medewerker {
 		this.comm = comm;
 	}
 
-	public Integer getAfd() {
+	public int getAfd() {
 		return afd;
 	}
 
-	public void setAfd(Integer afd) {
+	public void setAfd(int afd) {
 		this.afd = afd;
 	}
 
